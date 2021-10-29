@@ -10,19 +10,19 @@ export abstract class QuillEditor extends LitElement {
 
   options: QuillOptionsStatic | undefined;
 
-  _quill!: Quill;
+  quill!: Quill;
 
   firstUpdated() {
     for (const [key, value] of Object.entries(this.modules)) {
       Quill.register(key, value);
     }
 
-    this._quill = new Quill(
+    this.quill = new Quill(
       this.shadowRoot?.getElementById('editor') as Element,
       this.options
     );
 
-    this._quill.on('text-change', (delta, oldContents, source) =>
+    this.quill.on('text-change', (delta, oldContents, source) =>
       this.dispatchEvent(
         new CustomEvent('text-change', {
           detail: {
