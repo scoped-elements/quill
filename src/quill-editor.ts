@@ -1,7 +1,6 @@
 import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
-import { QuillOptionsStatic, Quill } from 'quill';
-import { cloneDeep } from 'lodash-es';
+import Quill, { QuillOptionsStatic } from 'quill';
 
 export type Dictionary<T> = { [key: string]: T };
 
@@ -14,13 +13,11 @@ export abstract class QuillEditor extends LitElement {
   _quill!: Quill;
 
   firstUpdated() {
-    const QuillClass = cloneDeep(Quill);
-
     for (const [key, value] of Object.entries(this.modules)) {
-      QuillClass.register(key, value);
+      Quill.register(key, value);
     }
 
-    this._quill = new QuillClass(
+    this._quill = new Quill(
       this.shadowRoot?.getElementById('editor') as Element,
       this.options
     );

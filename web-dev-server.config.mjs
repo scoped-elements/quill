@@ -2,8 +2,6 @@
 import rollupCommonjs from '@rollup/plugin-commonjs';
 import { fromRollup } from '@web/dev-server-rollup';
 
-const commonjs = fromRollup(rollup);
-
 /** Use Hot Module replacement by adding --hmr to the start command */
 const hmr = process.argv.includes('--hmr');
 
