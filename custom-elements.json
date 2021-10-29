@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./quill-snow"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/quill-editor.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "QuillEditor",
+          "members": [
+            {
+              "kind": "field",
+              "name": "modules",
+              "type": {
+                "text": "Dictionary<any>"
+              },
+              "default": "{}",
+              "attribute": "modules"
+            },
+            {
+              "kind": "field",
+              "name": "options",
+              "type": {
+                "text": "QuillOptionsStatic | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "quill",
+              "type": {
+                "text": "Quill"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "text-change",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "modules",
+              "type": {
+                "text": "Dictionary<any>"
+              },
+              "default": "{}",
+              "fieldName": "modules"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "QuillEditor",
+          "declaration": {
+            "name": "QuillEditor",
+            "module": "src/quill-editor.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/quill-snow.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "QuillSnow",
+          "members": [
+            {
+              "kind": "field",
+              "name": "modules",
+              "type": {
+                "text": "Dictionary<any>"
+              },
+              "default": "{}",
+              "attribute": "modules",
+              "inheritedFrom": {
+                "name": "QuillEditor",
+                "module": "src/quill-editor.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "options",
+              "type": {
+                "text": "QuillOptionsStatic | undefined"
+              },
+              "inheritedFrom": {
+                "name": "QuillEditor",
+                "module": "src/quill-editor.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "quill",
+              "type": {
+                "text": "Quill"
+              },
+              "inheritedFrom": {
+                "name": "QuillEditor",
+                "module": "src/quill-editor.ts"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "QuillEditor",
+            "module": "/src/quill-editor"
+          },
+          "attributes": [
+            {
+              "name": "modules",
+              "type": {
+                "text": "Dictionary<any>"
+              },
+              "default": "{}",
+              "fieldName": "modules",
+              "inheritedFrom": {
+                "name": "QuillEditor",
+                "module": "src/quill-editor.ts"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "text-change",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "inheritedFrom": {
+                "name": "QuillEditor",
+                "module": "src/quill-editor.ts"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "QuillSnow",
+          "declaration": {
+            "name": "QuillSnow",
+            "module": "src/quill-snow.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "stories/index.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Regular"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomTitle"
+        },
+        {
+          "kind": "variable",
+          "name": "CustomCounter"
+        },
+        {
+          "kind": "variable",
+          "name": "SlottedContent"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Regular",
+          "declaration": {
+            "name": "Regular",
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomTitle",
+          "declaration": {
+            "name": "CustomTitle",
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "CustomCounter",
+          "declaration": {
+            "name": "CustomCounter",
+            "module": "stories/index.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "SlottedContent",
+          "declaration": {
+            "name": "SlottedContent",
+            "module": "stories/index.stories.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
