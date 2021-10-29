@@ -1,5 +1,5 @@
 {
-  "name": "quill-editor",
+  "name": "@scoped-elements/quill",
   "description": "Webcomponent quill-editor following open-wc recommendations",
   "license": "MIT",
   "author": "quill-editor",
