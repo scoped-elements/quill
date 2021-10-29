@@ -4,11 +4,10 @@
   "license": "MIT",
   "author": "quill-editor",
   "version": "0.0.0",
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "exports": {
-    ".": "./dist/src/index.js",
-    "./quill-editor.js": "./dist/src/quill-editor.js"
+    ".": "./dist/index.js"
   },
   "scripts": {
     "analyze": "cem analyze --litelement",
