@@ -6,6 +6,9 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "analyze": "cem analyze --litelement",
     "start": "rimraf dist && rollup -c && concurrently -k -r \"rollup -c -w\" \"wds\"",
