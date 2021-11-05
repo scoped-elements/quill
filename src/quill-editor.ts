@@ -8,6 +8,7 @@ export abstract class QuillEditor extends LitElement {
   @property()
   modules: Dictionary<any> = {};
 
+  @property()
   options: QuillOptionsStatic | undefined;
 
   quill!: Quill;
@@ -38,6 +39,6 @@ export abstract class QuillEditor extends LitElement {
   }
 
   render() {
-    return html`<div id="editor"></div>`;
+    return html`<div id="editor" style="flex: 1;"></div>`;
   }
 }
