@@ -3,7 +3,7 @@
   "description": "Quill packaged using the scoped custom elements registries pattern of @open-wc/scoped-elements",
   "license": "MIT",
   "author": "guillem.cordoba@gmail.com",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "publishConfig": {

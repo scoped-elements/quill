@@ -10,6 +10,9 @@ export class QuillSnow extends QuillEditor {
       :host {
         display: flex;
       }
+      #editor {
+        word-break: break-all;
+      }
     `,
   ];
 }
