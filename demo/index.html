@@ -13,14 +13,24 @@
 
     <script type="module">
       import { html, render } from 'lit';
-      import { QuillSnow } from '../dist';
+      import { Quill, QuillSnow } from '../dist';
+      let BlockEmbed = Quill.import('blots/block/embed');
+
+      class DividerBlot extends BlockEmbed {}
+      DividerBlot.blotName = 'divider';
+      DividerBlot.tagName = 'hr';
+      Quill.register(DividerBlot);
 
       customElements.define('quill-snow', QuillSnow);
 
       render(
-        html` <quill-snow> some light-dom </quill-snow> `,
+        html` <quill-snow id="quill"> some light-dom </quill-snow> `,
         document.querySelector('#demo')
       );
+
+      setTimeout(() => {
+        document.getElementById('quill').quill.insertEmbed(0, 'divider', true);
+      });
     </script>
   </body>
 </html>

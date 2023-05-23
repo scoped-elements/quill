@@ -39,6 +39,6 @@ export abstract class QuillEditor extends LitElement {
   }
 
   render() {
-    return html`<div id="editor" style="flex: 1;"></div>`;
+    return html`<div id="editor" part="editor" style="flex: 1;"></div>`;
   }
 }
